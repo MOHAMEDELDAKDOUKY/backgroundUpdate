@@ -1,0 +1,16 @@
+# Hashes of file build rules.
+6b42ef5dc096d700b2637d2562c29c3e /media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/build/avidgstmeta/proto-src/atun.pb.cc
+8179fbc4308dbb7c69472b407536ef38 /media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/build/avidgstmeta/proto-src/avidpipeline.pb.cc
+c94909bd98f8de389f62af78957bd134 /media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/build/avidgstmeta/proto-src/blueprint.pb.cc
+89c0971e6485165e5e66a217c2d1039a /media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/build/avidgstmeta/proto-src/blueprint_fields.pb.cc
+9f101082c3c8590e5e1e19b0c20cb74e /media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/build/avidgstmeta/proto-src/configuration.pb.cc
+922856f52eed4d83cdef373b087cdb1d /media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/build/avidgstmeta/proto-src/configuration_values.pb.cc
+59ccaa39a2cfaaeb3c15edd874e6a225 /media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/build/avidgstmeta/proto-src/dev.pb.cc
+934af3bfed07c4756c68b78c105911c5 /media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/build/avidgstmeta/proto-src/event.pb.cc
+25b7ed1e6dc551c9bda0687f96c35bb2 /media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/build/avidgstmeta/proto-src/event_manager.pb.cc
+0fea2e961b84526837e0a4527fe5ec9d /media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/build/avidgstmeta/proto-src/frame_meta.pb.cc
+0114ac1d78e70d1e16a717f648f8927a /media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/build/avidgstmeta/proto-src/integration_gateway.pb.cc
+8a6ce94c3cebd5f25706ff4efac0037a /media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/build/avidgstmeta/proto-src/media_store.pb.cc
+7080a925c570e22ffd7129f2d7065daf /media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/build/avidgstmeta/proto-src/processor.pb.cc
+b11cd58bfc5777847dee7395b6e31485 /media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/build/avidgstmeta/proto-src/schema.pb.cc
+f4875f56a6f2b508f2540347a69eeb07 /media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/build/avidgstmeta/proto-src/types.pb.cc
