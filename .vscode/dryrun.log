@@ -1,6 +1,6 @@
 make --dry-run --always-make --keep-going --print-directory
-make: Entering directory '/media/avidbeam/workspace/dakdouky_ws/my_backgroundUpdate'
-make: Leaving directory '/media/avidbeam/workspace/dakdouky_ws/my_backgroundUpdate'
+make: Entering directory '/media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate'
+make: Leaving directory '/media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate'
  
 make: *** No targets specified and no makefile found.  Stop.
 

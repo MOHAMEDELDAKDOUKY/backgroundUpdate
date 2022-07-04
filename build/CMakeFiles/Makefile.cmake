@@ -7,11 +7,12 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "/media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/avidgstmeta/CMakeLists.txt"
-  "/media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/avidgstmeta/cmake/FindProtobuf.cmake"
-  "/media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/avidvpiwrapper/CMakeLists.txt"
+  "/home/avidbeam/dakdouky_ws/atun-gstreamer-runtime/avidgstmeta/CMakeLists.txt"
+  "/home/avidbeam/dakdouky_ws/atun-gstreamer-runtime/avidgstmeta/cmake/FindProtobuf.cmake"
+  "/home/avidbeam/dakdouky_ws/atun-gstreamer-runtime/avidvpiwrapper/CMakeLists.txt"
   "../CMakeLists.txt"
   "CMakeFiles/3.16.3/CMakeCCompiler.cmake"
+  "CMakeFiles/3.16.3/CMakeCUDACompiler.cmake"
   "CMakeFiles/3.16.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.16.3/CMakeSystem.cmake"
   "../cmake/FindNVDS.cmake"
@@ -23,6 +24,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.16/Modules/CMakeCCompiler.cmake.in"
   "/usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c"
   "/usr/share/cmake-3.16/Modules/CMakeCInformation.cmake"
+  "/usr/share/cmake-3.16/Modules/CMakeCUDACompiler.cmake.in"
+  "/usr/share/cmake-3.16/Modules/CMakeCUDACompilerABI.cu"
+  "/usr/share/cmake-3.16/Modules/CMakeCUDAInformation.cmake"
   "/usr/share/cmake-3.16/Modules/CMakeCXXCompiler.cmake.in"
   "/usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp"
   "/usr/share/cmake-3.16/Modules/CMakeCXXInformation.cmake"
@@ -30,6 +34,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.16/Modules/CMakeCommonLanguageInclude.cmake"
   "/usr/share/cmake-3.16/Modules/CMakeCompilerIdDetection.cmake"
   "/usr/share/cmake-3.16/Modules/CMakeDetermineCCompiler.cmake"
+  "/usr/share/cmake-3.16/Modules/CMakeDetermineCUDACompiler.cmake"
   "/usr/share/cmake-3.16/Modules/CMakeDetermineCXXCompiler.cmake"
   "/usr/share/cmake-3.16/Modules/CMakeDetermineCompileFeatures.cmake"
   "/usr/share/cmake-3.16/Modules/CMakeDetermineCompiler.cmake"
@@ -46,6 +51,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.16/Modules/CMakeSystemSpecificInformation.cmake"
   "/usr/share/cmake-3.16/Modules/CMakeSystemSpecificInitialize.cmake"
   "/usr/share/cmake-3.16/Modules/CMakeTestCCompiler.cmake"
+  "/usr/share/cmake-3.16/Modules/CMakeTestCUDACompiler.cmake"
   "/usr/share/cmake-3.16/Modules/CMakeTestCXXCompiler.cmake"
   "/usr/share/cmake-3.16/Modules/CMakeTestCompilerCommon.cmake"
   "/usr/share/cmake-3.16/Modules/CMakeUnixFindMake.cmake"
@@ -78,6 +84,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.16/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake"
   "/usr/share/cmake-3.16/Modules/Compiler/Intel-DetermineCompiler.cmake"
   "/usr/share/cmake-3.16/Modules/Compiler/MSVC-DetermineCompiler.cmake"
+  "/usr/share/cmake-3.16/Modules/Compiler/NVIDIA-CUDA.cmake"
   "/usr/share/cmake-3.16/Modules/Compiler/NVIDIA-DetermineCompiler.cmake"
   "/usr/share/cmake-3.16/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake"
   "/usr/share/cmake-3.16/Modules/Compiler/PGI-DetermineCompiler.cmake"
@@ -123,19 +130,19 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/3.16.3/CMakeSystem.cmake"
-  "CMakeFiles/3.16.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.16.3/CMakeCXXCompiler.cmake"
-  "CMakeFiles/3.16.3/CMakeCCompiler.cmake"
+  "CMakeFiles/3.16.3/CMakeCUDACompiler.cmake"
   "CMakeFiles/3.16.3/CMakeCXXCompiler.cmake"
+  "CMakeFiles/3.16.3/CMakeCUDACompiler.cmake"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
-  "/media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/build/avidgstmeta/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "/home/avidbeam/dakdouky_ws/atun-gstreamer-runtime/build/avidgstmeta/CMakeFiles/CMakeDirectoryInformation.cmake"
   "avidvpiwrapper/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/backgroundupdateplugin.dir/DependInfo.cmake"
-  "/media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/build/avidgstmeta/CMakeFiles/avidgstmeta_protos.dir/DependInfo.cmake"
-  "/media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/build/avidgstmeta/CMakeFiles/avidgstmeta.dir/DependInfo.cmake"
+  "/home/avidbeam/dakdouky_ws/atun-gstreamer-runtime/build/avidgstmeta/CMakeFiles/avidgstmeta_protos.dir/DependInfo.cmake"
+  "/home/avidbeam/dakdouky_ws/atun-gstreamer-runtime/build/avidgstmeta/CMakeFiles/avidgstmeta.dir/DependInfo.cmake"
   "avidvpiwrapper/CMakeFiles/avidvpiwrapper.dir/DependInfo.cmake"
   )

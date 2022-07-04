@@ -6,5 +6,5 @@ CXX_FLAGS = -O3 -DNDEBUG -fPIC   -std=gnu++17
 
 CXX_DEFINES = -DNV_VPI_VERSION_API=1020000 -Davidvpiwrapper_EXPORTS
 
-CXX_INCLUDES = -I/media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/avidvpiwrapper -I/usr/local/tensorRT/include -I/opt/nvidia/deepstream/deepstream/sources/includes -I/opt/nvidia/deepstream/deepstream/sources/gst-plugins/gst-nvdspreprocess/include -I/opt/nvidia/deepstream/deepstream/sources/libs/nvdsinfer -I/usr/local/cuda-11.4/targets/x86_64-linux/include -isystem /opt/nvidia/vpi1/include 
+CXX_INCLUDES = -I/home/avidbeam/dakdouky_ws/atun-gstreamer-runtime/avidvpiwrapper -I/usr/local/tensorRT/include -I/opt/nvidia/deepstream/deepstream/sources/includes -I/opt/nvidia/deepstream/deepstream/sources/gst-plugins/gst-nvdspreprocess/include -I/opt/nvidia/deepstream/deepstream/sources/libs/nvdsinfer -I/usr/local/cuda-11.4/targets/x86_64-linux/include -isystem /opt/nvidia/vpi1/include 
 

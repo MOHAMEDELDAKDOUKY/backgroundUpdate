@@ -23,6 +23,8 @@ nvbufsurftransform.h
 ../include/nvbufsurftransform.h
 opencv2/opencv.hpp
 -
+utils.hpp
+../include/utils.hpp
 vector
 -
 
@@ -32,7 +34,7 @@ stdint.h
 stdbool.h
 -
 
-../include/saveSurfaceToDisk.hpp
+../include/utils.hpp
 google/protobuf/util/json_util.h
 -
 algorithm
@@ -48,15 +50,15 @@ nvbufsurface.h
 nvbufsurftransform.h
 ../include/nvbufsurftransform.h
 
-/media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/avidgstdspluginloader/include/avidplugin.hpp
+/home/avidbeam/dakdouky_ws/atun-gstreamer-runtime/avidgstdspluginloader/include/avidplugin.hpp
 configuration_values.pb.h
-/media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/avidgstdspluginloader/include/configuration_values.pb.h
+/home/avidbeam/dakdouky_ws/atun-gstreamer-runtime/avidgstdspluginloader/include/configuration_values.pb.h
 gstnvdsmeta.h
-/media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/avidgstdspluginloader/include/gstnvdsmeta.h
+/home/avidbeam/dakdouky_ws/atun-gstreamer-runtime/avidgstdspluginloader/include/gstnvdsmeta.h
 nvbufsurface.h
-/media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/avidgstdspluginloader/include/nvbufsurface.h
+/home/avidbeam/dakdouky_ws/atun-gstreamer-runtime/avidgstdspluginloader/include/nvbufsurface.h
 
-/media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/build/avidgstmeta/proto-src/configuration_values.pb.h
+/home/avidbeam/dakdouky_ws/atun-gstreamer-runtime/build/avidgstmeta/proto-src/configuration_values.pb.h
 limits
 -
 string
@@ -96,17 +98,17 @@ google/protobuf/generated_enum_reflection.h
 google/protobuf/unknown_field_set.h
 -
 types.pb.h
-/media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/build/avidgstmeta/proto-src/types.pb.h
+/home/avidbeam/dakdouky_ws/atun-gstreamer-runtime/build/avidgstmeta/proto-src/types.pb.h
 schema.pb.h
-/media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/build/avidgstmeta/proto-src/schema.pb.h
+/home/avidbeam/dakdouky_ws/atun-gstreamer-runtime/build/avidgstmeta/proto-src/schema.pb.h
 event.pb.h
-/media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/build/avidgstmeta/proto-src/event.pb.h
+/home/avidbeam/dakdouky_ws/atun-gstreamer-runtime/build/avidgstmeta/proto-src/event.pb.h
 google/protobuf/port_def.inc
 -
 google/protobuf/port_undef.inc
 -
 
-/media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/build/avidgstmeta/proto-src/event.pb.h
+/home/avidbeam/dakdouky_ws/atun-gstreamer-runtime/build/avidgstmeta/proto-src/event.pb.h
 limits
 -
 string
@@ -140,17 +142,17 @@ google/protobuf/generated_enum_reflection.h
 google/protobuf/unknown_field_set.h
 -
 media_store.pb.h
-/media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/build/avidgstmeta/proto-src/media_store.pb.h
+/home/avidbeam/dakdouky_ws/atun-gstreamer-runtime/build/avidgstmeta/proto-src/media_store.pb.h
 types.pb.h
-/media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/build/avidgstmeta/proto-src/types.pb.h
+/home/avidbeam/dakdouky_ws/atun-gstreamer-runtime/build/avidgstmeta/proto-src/types.pb.h
 schema.pb.h
-/media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/build/avidgstmeta/proto-src/schema.pb.h
+/home/avidbeam/dakdouky_ws/atun-gstreamer-runtime/build/avidgstmeta/proto-src/schema.pb.h
 google/protobuf/port_def.inc
 -
 google/protobuf/port_undef.inc
 -
 
-/media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/build/avidgstmeta/proto-src/frame_meta.pb.h
+/home/avidbeam/dakdouky_ws/atun-gstreamer-runtime/build/avidgstmeta/proto-src/frame_meta.pb.h
 limits
 -
 string
@@ -182,15 +184,15 @@ google/protobuf/extension_set.h
 google/protobuf/unknown_field_set.h
 -
 event.pb.h
-/media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/build/avidgstmeta/proto-src/event.pb.h
+/home/avidbeam/dakdouky_ws/atun-gstreamer-runtime/build/avidgstmeta/proto-src/event.pb.h
 types.pb.h
-/media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/build/avidgstmeta/proto-src/types.pb.h
+/home/avidbeam/dakdouky_ws/atun-gstreamer-runtime/build/avidgstmeta/proto-src/types.pb.h
 google/protobuf/port_def.inc
 -
 google/protobuf/port_undef.inc
 -
 
-/media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/build/avidgstmeta/proto-src/media_store.pb.h
+/home/avidbeam/dakdouky_ws/atun-gstreamer-runtime/build/avidgstmeta/proto-src/media_store.pb.h
 limits
 -
 string
@@ -228,7 +230,7 @@ google/protobuf/port_def.inc
 google/protobuf/port_undef.inc
 -
 
-/media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/build/avidgstmeta/proto-src/schema.pb.h
+/home/avidbeam/dakdouky_ws/atun-gstreamer-runtime/build/avidgstmeta/proto-src/schema.pb.h
 limits
 -
 string
@@ -266,7 +268,7 @@ google/protobuf/port_def.inc
 google/protobuf/port_undef.inc
 -
 
-/media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/build/avidgstmeta/proto-src/types.pb.h
+/home/avidbeam/dakdouky_ws/atun-gstreamer-runtime/build/avidgstmeta/proto-src/types.pb.h
 limits
 -
 string
@@ -306,15 +308,15 @@ google/protobuf/generated_enum_reflection.h
 google/protobuf/unknown_field_set.h
 -
 schema.pb.h
-/media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/build/avidgstmeta/proto-src/schema.pb.h
+/home/avidbeam/dakdouky_ws/atun-gstreamer-runtime/build/avidgstmeta/proto-src/schema.pb.h
 google/protobuf/port_def.inc
 -
 google/protobuf/port_undef.inc
 -
 
-/media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate/src/BackgroundUpdateImpl.cpp
+/home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/src/BackgroundUpdateImpl.cpp
 BackgroundUpdateImpl.hpp
-/media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate/src/BackgroundUpdateImpl.hpp
+/home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/src/BackgroundUpdateImpl.hpp
 google/protobuf/util/json_util.h
 -
 algorithm
@@ -322,11 +324,17 @@ algorithm
 iostream
 -
 event.pb.h
-/media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate/src/event.pb.h
+/home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/src/event.pb.h
 nvdspreprocess_meta.h
-/media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate/src/nvdspreprocess_meta.h
-saveSurfaceToDisk.hpp
-/media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate/src/saveSurfaceToDisk.hpp
+/home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/src/nvdspreprocess_meta.h
+time.h
+-
+
+/home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/src/median_vpi.cpp
+
+/home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/src/utils.cpp
+utils.hpp
+/home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/src/utils.hpp
 
 /opt/nvidia/deepstream/deepstream/sources/includes/gstnvdsmeta.h
 gst/gst.h

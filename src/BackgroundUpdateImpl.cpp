@@ -7,7 +7,7 @@
 
 #include "event.pb.h"
 #include "nvdspreprocess_meta.h"
-#include "saveSurfaceToDisk.hpp"
+
 
 #define PRIMARY_DETECTOR_UID 1
 #define PGIE_CLASS_ID_PERSON 0
@@ -25,7 +25,7 @@ void BackgroundUpdateImpl::onCreate(const avid::proto::configuration_values::Fie
   json_op.always_print_primitive_fields = true;
   std::string json_str;
   google::protobuf::util::MessageToJsonString(plugin_config, &json_str, json_op);
-  printf("received plugin config: %s\n", json_str.c_str());
+  //printf("received plugin config: %s\n", json_str.c_str());
 
   total_number_of_persons = 0;
 }
@@ -34,29 +34,18 @@ void BackgroundUpdateImpl::onDestroy() {}
 
 void BackgroundUpdateImpl::onFrame(NvBufSurface *p_surface, NvDsFrameMeta *p_frame_meta)
 {
+  static bool once = true;
+  // if (!once) return;
+  if (once)
+    once = false;
+
+  std::cout << std::endl;
+
   bool frame_has_obj = false;
 
-  // Read input file (image)
-  std::string imagePath = "data/imagebilateral.png";
-  cv::Mat input = cv::imread(imagePath, 0);
-  if (input.empty())
-  {
-    std::cout << "Could not load image. Check location and try again." << std::endl;
-    std::cin.get();
-    return;
-  }
-
-  double running_sum = 0.0;
-  int attempts = 10;
-
-  cv::Size resize_size;
-  resize_size.width = 960;
-  resize_size.height = 800;
-  cv::resize(input, input, resize_size);
-  cv::Mat output_gpu(input.rows, input.cols, CV_8UC1);
-  cv::Mat output_cpu(input.rows, input.cols, CV_8UC1);
-
-  median_filter_wrapper(input, output_gpu);
+  // median_filter_wrapper(input, output_gpu);
+  //  std::cout << output_gpu.size();
+  //  cv::imwrite("gpu_median_result.png", output_gpu);
 
   NvDsObjectMeta *obj_meta = NULL;
 
@@ -64,7 +53,8 @@ void BackgroundUpdateImpl::onFrame(NvBufSurface *p_surface, NvDsFrameMeta *p_fra
 
   NvDsMetaList *l_obj = NULL;
 
-  NvBufSurface *sec_buf = NULL;
+  NvBufSurface *dst_buf = NULL;
+  NvBufSurface *rec_buf = NULL;
 
   int offset = 0;
   uint32_t obj_top = 0;
@@ -81,11 +71,36 @@ void BackgroundUpdateImpl::onFrame(NvBufSurface *p_surface, NvDsFrameMeta *p_fra
   display_meta->rect_params[0].border_width = 2;
   display_meta->rect_params[0].border_color = {0, 1, 0, 1};
   nvds_add_display_meta_to_frame(p_frame_meta, display_meta);
-  sec_buf = saveSurfaceToDisk(p_surface);
-  p_surface->surfaceList[0].dataPtr = sec_buf->surfaceList[0].dataPtr;
-  // record.push_back(p_surface);
-  // std::cout<< std::endl << sizeof(record[0]) * record.size() << "================================================================================  "
-  //                 << record.size()<< std::endl;
+
+  rec_buf = allocate_surface(p_surface);
+  record.push_back(rec_buf);
+  const int RECORD_LENGTH = 1024; 
+  if (frame_number == RECORD_LENGTH-1)
+  {
+    dst_buf = allocate_surface(p_surface);
+    printf(" main: output_rows: %d output_cols: %d dst_pitch: %d src_pitch: %d \n ",
+      dst_buf->surfaceList->height,dst_buf->surfaceList->width, dst_buf->surfaceList->pitch,p_surface->surfaceList->pitch );
+
+    #include <time.h>
+    clock_t tStart = clock();
+
+    median_filter(p_surface, dst_buf, record);   
+    
+    printf("\n\n\nTime taken: %.2fs\n\n\n", (double)(clock() - tStart)/CLOCKS_PER_SEC);
+
+    save_to_disk(dst_buf);
+
+
+    for (auto rec : record)
+    {
+      NvBufSurfaceDestroy(rec);
+    }
+    NvBufSurfaceDestroy(dst_buf);  
+    std::cout << "freed once" << std::endl; 
+
+  throw std::runtime_error (" "); 
+  }
+
 
   // for (l_obj = p_frame_meta->obj_meta_list; l_obj != NULL; l_obj = l_obj->next) {
   //   obj_meta = (NvDsObjectMeta *)(l_obj->data);
@@ -131,6 +146,7 @@ void BackgroundUpdateImpl::onFrame(NvBufSurface *p_surface, NvDsFrameMeta *p_fra
   g_print("Frame Number = %d Person Count = %d \n", frame_number, person_count);
 
   frame_number++;
+  std::cout << std::endl;
 }
 
 void BackgroundUpdateImpl::onConfig(const avid::proto::configuration_values::FieldGroupValue &plugin_config) {}

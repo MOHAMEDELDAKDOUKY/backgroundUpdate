@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Jun 14 14:19:54 2022
+# Make data base, printed on Wed Jun 29 13:38:41 2022
 
 # Variables
 
@@ -33,15 +33,19 @@ VSCODE_LOG_NATIVE = false
 # default
 MAKE_VERSION := 4.2.1
 # makefile
-CURDIR := /media/avidbeam/workspace/dakdouky_ws/my_backgroundUpdate
+CURDIR := /media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate
 # makefile
 SHELL = /bin/sh
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en","availableLanguages":{}}
 # environment
-_ = /home/avidbeam/.vscode-server/bin/dfd34e8260c270da74b5c2d86d61aee4b6d56977/node
+_ = /home/avidbeam/.vscode-server/bin/30d9c6cd9483b2cc586687151bcbcd635f373630/node
 # makefile
 MAKEFILE_LIST := 
+# environment
+OpenCV_DIR = /opt/intel/openvino_2021/opencv/cmake
+# environment
+INTEL_OPENVINO_DIR = /opt/intel/openvino_2021
 # 'override' directive
 GNUMAKEFLAGS := 
 # environment
@@ -53,41 +57,63 @@ DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
+GI_TYPELIB_PATH = /opt/intel/openvino_2021/data_processing/gstreamer/lib/girepository-1.0
+# environment
+LESSOPEN = | /usr/bin/lesspipe %s
+# environment
 LC_NAME = ar_EG.UTF-8
 # environment
 VSCODE_CWD = /home/avidbeam
 # environment
-SSH_CONNECTION = 192.168.0.101 61135 192.168.0.70 22
+SSH_CONNECTION = 192.168.0.101 46014 192.168.0.70 22
 # environment
-PATH = /home/avidbeam/.vscode-server/bin/dfd34e8260c270da74b5c2d86d61aee4b6d56977/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+PATH = /home/avidbeam/.vscode-server/bin/30d9c6cd9483b2cc586687151bcbcd635f373630/bin/remote-cli:/opt/intel/openvino_2021/deployment_tools/model_optimizer:/opt/intel/openvino_2021/data_processing/gstreamer/bin:/opt/intel/openvino_2021/data_processing/gstreamer/bin/gstreamer-1.0:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/avidbeam/thirdparty/storm/bin:/usr/local/cuda/bin:/usr/local/avidbeam/thirdparty/storm/bin:/home/avidbeam/bin:/usr/local/go/bin:/home/avidbeam/go/bin:/usr/local/avidbeam/thirdparty/storm/bin
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
+MODELS_PATH = /home/avidbeam/intel/dl_streamer/models
+# environment
+LIBRARY_PATH = /opt/intel/openvino_2021/data_processing/dl_streamer/lib:/opt/intel/openvino_2021/data_processing/gstreamer/lib:
+# environment
+ngraph_DIR = /opt/intel/openvino_2021/deployment_tools/ngraph/cmake
+# environment
+GST_VAAPI_ALL_DRIVERS = 1
+# environment
 VSCODE_LOG_STACK = false
 # environment
-LC_NUMERIC = ar_EG.UTF-8
+LC_NUMERIC = C
 # environment
-VSCODE_IPC_HOOK_CLI = /run/user/1000/vscode-ipc-932023cd-fdcd-4cff-bdb2-1846a6970f95.sock
+VSCODE_IPC_HOOK_CLI = /run/user/1000/vscode-ipc-3b141f96-5efe-4bb0-8b33-d0de98d0f8b1.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
+# environment
+LS_COLORS = 
 # automatic
 %F = $(notdir $%)
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
-PWD = /media/avidbeam/workspace/dakdouky_ws/my_backgroundUpdate
+PWD = /media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate
+# environment
+TBB_DIR = /opt/intel/openvino_2021/deployment_tools/inference_engine/external/tbb/cmake
 # default
 .LOADED := 
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
+PKG_CONFIG_PATH = /opt/intel/openvino_2021/data_processing/dl_streamer/lib/pkgconfig:/opt/intel/openvino_2021/data_processing/gstreamer/lib/pkgconfig:
+# environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
 HOME = /home/avidbeam
 # environment
+LD_LIBRARY_PATH = /opt/intel/openvino_2021/data_processing/dl_streamer/lib:/opt/intel/openvino_2021/data_processing/gstreamer/lib:/opt/intel/openvino_2021/opencv/lib:/opt/intel/openvino_2021/deployment_tools/ngraph/lib:/opt/intel/openvino_2021/deployment_tools/inference_engine/external/tbb/lib::/opt/intel/openvino_2021/deployment_tools/inference_engine/external/hddl/lib:/opt/intel/openvino_2021/deployment_tools/inference_engine/external/omp/lib:/opt/intel/openvino_2021/deployment_tools/inference_engine/external/gna/lib:/opt/intel/openvino_2021/deployment_tools/inference_engine/external/mkltiny_lnx/lib:/opt/intel/openvino_2021/deployment_tools/inference_engine/lib/intel64::/usr/local/cuda/lib64
+# environment
+LESSCLOSE = /usr/bin/lesspipe %s %s
+# environment
 LOGNAME = avidbeam
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # automatic
 +F = $(notdir $+)
 # environment
@@ -103,43 +129,63 @@ MAKECMDGOALS := all
 # environment
 SHLVL = 1
 # environment
-XDG_SESSION_ID = 136
+INTEL_CVSDK_DIR = /opt/intel/openvino_2021
+# environment
+GST_SAMPLES_DIR = /opt/intel/openvino_2021/data_processing/dl_streamer/samples
+# environment
+XDG_SESSION_ID = 3
 # environment
 USER = avidbeam
 # environment
 LC_MONETARY = ar_EG.UTF-8
 # makefile
 .DEFAULT_GOAL := 
+# environment
+GST_PLUGIN_SYSTEM_PATH = /home/avidbeam/.local/share/.gstreamer-1.0:/usr/lib/x86_64-linux-gnu/gstreamer-1.0
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
 LC_TELEPHONE = ar_EG.UTF-8
+# environment
+InferenceEngine_DIR = /opt/intel/openvino_2021/deployment_tools/inference_engine/share
 # default
 MAKE_COMMAND := make
 # default
 .VARIABLES := 
 # automatic
 *F = $(notdir $*)
+# environment
+PYTHONPATH = /opt/intel/openvino_2021/python/python3.8:/opt/intel/openvino_2021/python/python3:/opt/intel/openvino_2021/deployment_tools/tools/post_training_optimization_toolkit:/opt/intel/openvino_2021/deployment_tools/open_model_zoo/tools/accuracy_checker:/opt/intel/openvino_2021/deployment_tools/model_optimizer:/opt/intel/openvino_2021/data_processing/dl_streamer/python:/opt/intel/openvino_2021/data_processing/gstreamer/lib/python3.8/site-packages:
 # makefile
 MAKEFLAGS = pqrR
 # environment
 MFLAGS = -pqrR
 # environment
-SSH_CLIENT = 192.168.0.101 61135 22
+SSH_CLIENT = 192.168.0.101 46014 22
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # environment
-BROWSER = /home/avidbeam/.vscode-server/bin/dfd34e8260c270da74b5c2d86d61aee4b6d56977/bin/helpers/browser.sh
+GST_PLUGIN_SCANNER = /opt/intel/openvino_2021/data_processing/gstreamer/bin/gstreamer-1.0/gst-plugin-scanner
+# environment
+BROWSER = /home/avidbeam/.vscode-server/bin/30d9c6cd9483b2cc586687151bcbcd635f373630/bin/helpers/browser.sh
+# environment
+VSCODE_HANDLES_SIGPIPE = true
+# environment
+GST_PLUGIN_PATH = /opt/intel/openvino_2021/data_processing/dl_streamer/lib:/opt/intel/openvino_2021/data_processing/gstreamer/lib/gstreamer-1.0
 # default
 MAKEFILES := 
 # automatic
 <F = $(notdir $<)
+# environment
+STORM_HOME = /usr/local/avidbeam/thirdparty/storm
 # automatic
 ^F = $(notdir $^)
 # environment
 LC_MEASUREMENT = ar_EG.UTF-8
 # environment
 LC_ALL = C
+# environment
+HDDL_INSTALL_DIR = /opt/intel/openvino_2021/deployment_tools/inference_engine/external/hddl
 # environment
 LC_PAPER = ar_EG.UTF-8
 # default
@@ -161,7 +207,7 @@ VSCODE_EXTHOST_WILL_SEND_SOCKET = true
 # environment
 MOTD_SHOWN = pam
 # variable set hash-table stats:
-# Load=75/1024=7%, Rehash=0, Collisions=13/97=13%
+# Load=98/1024=10%, Rehash=0, Collisions=15/120=12%
 
 # Pattern-specific Variable Values
 
@@ -169,9 +215,9 @@ MOTD_SHOWN = pam
 
 # Directories
 
-# . (device 2051, inode 25174579): 8 files, no impossibilities.
+# . (device 2051, inode 25174579): 15 files, no impossibilities.
 
-# 8 files, no impossibilities in 1 directories.
+# 15 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -221,13 +267,13 @@ GNUmakefile:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 16 / storage = 137 B / avg = 8 B
-# current buf: size = 8162 B / used = 137 B / count = 16 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 23 / storage = 219 B / avg = 9 B
+# current buf: size = 8162 B / used = 219 B / count = 23 / avg = 9 B
 
-# strcache performance: lookups = 19 / hit rate = 15%
+# strcache performance: lookups = 26 / hit rate = 11%
 # hash-table stats:
-# Load=16/8192=0%, Rehash=0, Collisions=1/19=5%
-# Finished Make data base on Tue Jun 14 14:19:54 2022
+# Load=23/8192=0%, Rehash=0, Collisions=1/26=4%
+# Finished Make data base on Wed Jun 29 13:38:41 2022
 
  
 make: *** No rule to make target 'all'.  Stop.

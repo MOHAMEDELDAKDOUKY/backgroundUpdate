@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/avidvpiwrapper/avidvpiwrapper.cpp" "/media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate/build/avidvpiwrapper/CMakeFiles/avidvpiwrapper.dir/avidvpiwrapper.cpp.o"
+  "/home/avidbeam/dakdouky_ws/atun-gstreamer-runtime/avidvpiwrapper/avidvpiwrapper.cpp" "/home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/build/avidvpiwrapper/CMakeFiles/avidvpiwrapper.dir/avidvpiwrapper.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -16,7 +16,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/avidvpiwrapper"
+  "/home/avidbeam/dakdouky_ws/atun-gstreamer-runtime/avidvpiwrapper"
   "/usr/local/tensorRT/include"
   "/opt/nvidia/deepstream/deepstream/sources/includes"
   "/opt/nvidia/deepstream/deepstream/sources/gst-plugins/gst-nvdspreprocess/include"

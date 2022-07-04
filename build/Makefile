@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate
+CMAKE_SOURCE_DIR = /home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate/build
+CMAKE_BINARY_DIR = /home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -126,9 +126,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate/build/CMakeFiles /media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/build/CMakeFiles /home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -179,7 +179,7 @@ avidgstmeta_protos: cmake_check_build_system
 
 # fast build rule for target.
 avidgstmeta_protos/fast:
-	$(MAKE) -f /media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/build/avidgstmeta/CMakeFiles/avidgstmeta_protos.dir/build.make /media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/build/avidgstmeta/CMakeFiles/avidgstmeta_protos.dir/build
+	$(MAKE) -f /home/avidbeam/dakdouky_ws/atun-gstreamer-runtime/build/avidgstmeta/CMakeFiles/avidgstmeta_protos.dir/build.make /home/avidbeam/dakdouky_ws/atun-gstreamer-runtime/build/avidgstmeta/CMakeFiles/avidgstmeta_protos.dir/build
 .PHONY : avidgstmeta_protos/fast
 
 #=============================================================================
@@ -192,7 +192,7 @@ avidgstmeta: cmake_check_build_system
 
 # fast build rule for target.
 avidgstmeta/fast:
-	$(MAKE) -f /media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/build/avidgstmeta/CMakeFiles/avidgstmeta.dir/build.make /media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/build/avidgstmeta/CMakeFiles/avidgstmeta.dir/build
+	$(MAKE) -f /home/avidbeam/dakdouky_ws/atun-gstreamer-runtime/build/avidgstmeta/CMakeFiles/avidgstmeta.dir/build.make /home/avidbeam/dakdouky_ws/atun-gstreamer-runtime/build/avidgstmeta/CMakeFiles/avidgstmeta.dir/build
 .PHONY : avidgstmeta/fast
 
 #=============================================================================
@@ -235,32 +235,86 @@ src/BackgroundUpdateImpl.cpp.s:
 	$(MAKE) -f CMakeFiles/backgroundupdateplugin.dir/build.make CMakeFiles/backgroundupdateplugin.dir/src/BackgroundUpdateImpl.cpp.s
 .PHONY : src/BackgroundUpdateImpl.cpp.s
 
-src/saveSurfaceToDisk.o: src/saveSurfaceToDisk.cpp.o
+src/median_gpu.o: src/median_gpu.cu.o
 
-.PHONY : src/saveSurfaceToDisk.o
+.PHONY : src/median_gpu.o
 
 # target to build an object file
-src/saveSurfaceToDisk.cpp.o:
-	$(MAKE) -f CMakeFiles/backgroundupdateplugin.dir/build.make CMakeFiles/backgroundupdateplugin.dir/src/saveSurfaceToDisk.cpp.o
-.PHONY : src/saveSurfaceToDisk.cpp.o
+src/median_gpu.cu.o:
+	$(MAKE) -f CMakeFiles/backgroundupdateplugin.dir/build.make CMakeFiles/backgroundupdateplugin.dir/src/median_gpu.cu.o
+.PHONY : src/median_gpu.cu.o
 
-src/saveSurfaceToDisk.i: src/saveSurfaceToDisk.cpp.i
+src/median_gpu.i: src/median_gpu.cu.i
 
-.PHONY : src/saveSurfaceToDisk.i
+.PHONY : src/median_gpu.i
 
 # target to preprocess a source file
-src/saveSurfaceToDisk.cpp.i:
-	$(MAKE) -f CMakeFiles/backgroundupdateplugin.dir/build.make CMakeFiles/backgroundupdateplugin.dir/src/saveSurfaceToDisk.cpp.i
-.PHONY : src/saveSurfaceToDisk.cpp.i
+src/median_gpu.cu.i:
+	$(MAKE) -f CMakeFiles/backgroundupdateplugin.dir/build.make CMakeFiles/backgroundupdateplugin.dir/src/median_gpu.cu.i
+.PHONY : src/median_gpu.cu.i
 
-src/saveSurfaceToDisk.s: src/saveSurfaceToDisk.cpp.s
+src/median_gpu.s: src/median_gpu.cu.s
 
-.PHONY : src/saveSurfaceToDisk.s
+.PHONY : src/median_gpu.s
 
 # target to generate assembly for a file
-src/saveSurfaceToDisk.cpp.s:
-	$(MAKE) -f CMakeFiles/backgroundupdateplugin.dir/build.make CMakeFiles/backgroundupdateplugin.dir/src/saveSurfaceToDisk.cpp.s
-.PHONY : src/saveSurfaceToDisk.cpp.s
+src/median_gpu.cu.s:
+	$(MAKE) -f CMakeFiles/backgroundupdateplugin.dir/build.make CMakeFiles/backgroundupdateplugin.dir/src/median_gpu.cu.s
+.PHONY : src/median_gpu.cu.s
+
+src/median_vpi.o: src/median_vpi.cpp.o
+
+.PHONY : src/median_vpi.o
+
+# target to build an object file
+src/median_vpi.cpp.o:
+	$(MAKE) -f CMakeFiles/backgroundupdateplugin.dir/build.make CMakeFiles/backgroundupdateplugin.dir/src/median_vpi.cpp.o
+.PHONY : src/median_vpi.cpp.o
+
+src/median_vpi.i: src/median_vpi.cpp.i
+
+.PHONY : src/median_vpi.i
+
+# target to preprocess a source file
+src/median_vpi.cpp.i:
+	$(MAKE) -f CMakeFiles/backgroundupdateplugin.dir/build.make CMakeFiles/backgroundupdateplugin.dir/src/median_vpi.cpp.i
+.PHONY : src/median_vpi.cpp.i
+
+src/median_vpi.s: src/median_vpi.cpp.s
+
+.PHONY : src/median_vpi.s
+
+# target to generate assembly for a file
+src/median_vpi.cpp.s:
+	$(MAKE) -f CMakeFiles/backgroundupdateplugin.dir/build.make CMakeFiles/backgroundupdateplugin.dir/src/median_vpi.cpp.s
+.PHONY : src/median_vpi.cpp.s
+
+src/utils.o: src/utils.cpp.o
+
+.PHONY : src/utils.o
+
+# target to build an object file
+src/utils.cpp.o:
+	$(MAKE) -f CMakeFiles/backgroundupdateplugin.dir/build.make CMakeFiles/backgroundupdateplugin.dir/src/utils.cpp.o
+.PHONY : src/utils.cpp.o
+
+src/utils.i: src/utils.cpp.i
+
+.PHONY : src/utils.i
+
+# target to preprocess a source file
+src/utils.cpp.i:
+	$(MAKE) -f CMakeFiles/backgroundupdateplugin.dir/build.make CMakeFiles/backgroundupdateplugin.dir/src/utils.cpp.i
+.PHONY : src/utils.cpp.i
+
+src/utils.s: src/utils.cpp.s
+
+.PHONY : src/utils.s
+
+# target to generate assembly for a file
+src/utils.cpp.s:
+	$(MAKE) -f CMakeFiles/backgroundupdateplugin.dir/build.make CMakeFiles/backgroundupdateplugin.dir/src/utils.cpp.s
+.PHONY : src/utils.cpp.s
 
 # Help Target
 help:
@@ -281,9 +335,15 @@ help:
 	@echo "... src/BackgroundUpdateImpl.o"
 	@echo "... src/BackgroundUpdateImpl.i"
 	@echo "... src/BackgroundUpdateImpl.s"
-	@echo "... src/saveSurfaceToDisk.o"
-	@echo "... src/saveSurfaceToDisk.i"
-	@echo "... src/saveSurfaceToDisk.s"
+	@echo "... src/median_gpu.o"
+	@echo "... src/median_gpu.i"
+	@echo "... src/median_gpu.s"
+	@echo "... src/median_vpi.o"
+	@echo "... src/median_vpi.i"
+	@echo "... src/median_vpi.s"
+	@echo "... src/utils.o"
+	@echo "... src/utils.i"
+	@echo "... src/utils.s"
 .PHONY : help
 
 

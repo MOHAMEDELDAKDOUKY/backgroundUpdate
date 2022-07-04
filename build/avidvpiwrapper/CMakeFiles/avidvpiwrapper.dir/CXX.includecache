@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/avidvpiwrapper/avidvpiwrapper.cpp
+/home/avidbeam/dakdouky_ws/atun-gstreamer-runtime/avidvpiwrapper/avidvpiwrapper.cpp
 avidvpiwrapper.hpp
-/media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/avidvpiwrapper/avidvpiwrapper.hpp
+/home/avidbeam/dakdouky_ws/atun-gstreamer-runtime/avidvpiwrapper/avidvpiwrapper.hpp
 cstring
 -
 iostream
@@ -16,7 +16,7 @@ iostream
 sstream
 -
 
-/media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/avidvpiwrapper/avidvpiwrapper.hpp
+/home/avidbeam/dakdouky_ws/atun-gstreamer-runtime/avidvpiwrapper/avidvpiwrapper.hpp
 cuda.h
 -
 cuda_runtime.h
@@ -38,9 +38,9 @@ memory
 vector
 -
 nvbufsurface.h
-/media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/avidvpiwrapper/nvbufsurface.h
+/home/avidbeam/dakdouky_ws/atun-gstreamer-runtime/avidvpiwrapper/nvbufsurface.h
 nvbufsurftransform.h
-/media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/avidvpiwrapper/nvbufsurftransform.h
+/home/avidbeam/dakdouky_ws/atun-gstreamer-runtime/avidvpiwrapper/nvbufsurftransform.h
 
 /opt/nvidia/deepstream/deepstream/sources/includes/nvbufsurface.h
 stdint.h

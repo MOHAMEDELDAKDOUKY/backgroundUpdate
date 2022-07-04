@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate
+CMAKE_SOURCE_DIR = /home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate/build
+CMAKE_BINARY_DIR = /home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -126,14 +126,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate/build && $(CMAKE_COMMAND) -E cmake_progress_start /media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate/build/CMakeFiles /media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate/build/avidvpiwrapper/CMakeFiles/progress.marks
-	cd /media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate/build && $(MAKE) -f CMakeFiles/Makefile2 avidvpiwrapper/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate/build/CMakeFiles 0
+	cd /home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/build/CMakeFiles /home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/build/avidvpiwrapper/CMakeFiles/progress.marks
+	cd /home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/build && $(MAKE) -f CMakeFiles/Makefile2 avidvpiwrapper/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate/build && $(MAKE) -f CMakeFiles/Makefile2 avidvpiwrapper/clean
+	cd /home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/build && $(MAKE) -f CMakeFiles/Makefile2 avidvpiwrapper/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,22 +143,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate/build && $(MAKE) -f CMakeFiles/Makefile2 avidvpiwrapper/preinstall
+	cd /home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/build && $(MAKE) -f CMakeFiles/Makefile2 avidvpiwrapper/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate/build && $(MAKE) -f CMakeFiles/Makefile2 avidvpiwrapper/preinstall
+	cd /home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/build && $(MAKE) -f CMakeFiles/Makefile2 avidvpiwrapper/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 avidvpiwrapper/CMakeFiles/avidvpiwrapper.dir/rule:
-	cd /media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate/build && $(MAKE) -f CMakeFiles/Makefile2 avidvpiwrapper/CMakeFiles/avidvpiwrapper.dir/rule
+	cd /home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/build && $(MAKE) -f CMakeFiles/Makefile2 avidvpiwrapper/CMakeFiles/avidvpiwrapper.dir/rule
 .PHONY : avidvpiwrapper/CMakeFiles/avidvpiwrapper.dir/rule
 
 # Convenience name for target.
@@ -168,7 +168,7 @@ avidvpiwrapper: avidvpiwrapper/CMakeFiles/avidvpiwrapper.dir/rule
 
 # fast build rule for target.
 avidvpiwrapper/fast:
-	cd /media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate/build && $(MAKE) -f avidvpiwrapper/CMakeFiles/avidvpiwrapper.dir/build.make avidvpiwrapper/CMakeFiles/avidvpiwrapper.dir/build
+	cd /home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/build && $(MAKE) -f avidvpiwrapper/CMakeFiles/avidvpiwrapper.dir/build.make avidvpiwrapper/CMakeFiles/avidvpiwrapper.dir/build
 .PHONY : avidvpiwrapper/fast
 
 avidvpiwrapper.o: avidvpiwrapper.cpp.o
@@ -177,7 +177,7 @@ avidvpiwrapper.o: avidvpiwrapper.cpp.o
 
 # target to build an object file
 avidvpiwrapper.cpp.o:
-	cd /media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate/build && $(MAKE) -f avidvpiwrapper/CMakeFiles/avidvpiwrapper.dir/build.make avidvpiwrapper/CMakeFiles/avidvpiwrapper.dir/avidvpiwrapper.cpp.o
+	cd /home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/build && $(MAKE) -f avidvpiwrapper/CMakeFiles/avidvpiwrapper.dir/build.make avidvpiwrapper/CMakeFiles/avidvpiwrapper.dir/avidvpiwrapper.cpp.o
 .PHONY : avidvpiwrapper.cpp.o
 
 avidvpiwrapper.i: avidvpiwrapper.cpp.i
@@ -186,7 +186,7 @@ avidvpiwrapper.i: avidvpiwrapper.cpp.i
 
 # target to preprocess a source file
 avidvpiwrapper.cpp.i:
-	cd /media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate/build && $(MAKE) -f avidvpiwrapper/CMakeFiles/avidvpiwrapper.dir/build.make avidvpiwrapper/CMakeFiles/avidvpiwrapper.dir/avidvpiwrapper.cpp.i
+	cd /home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/build && $(MAKE) -f avidvpiwrapper/CMakeFiles/avidvpiwrapper.dir/build.make avidvpiwrapper/CMakeFiles/avidvpiwrapper.dir/avidvpiwrapper.cpp.i
 .PHONY : avidvpiwrapper.cpp.i
 
 avidvpiwrapper.s: avidvpiwrapper.cpp.s
@@ -195,7 +195,7 @@ avidvpiwrapper.s: avidvpiwrapper.cpp.s
 
 # target to generate assembly for a file
 avidvpiwrapper.cpp.s:
-	cd /media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate/build && $(MAKE) -f avidvpiwrapper/CMakeFiles/avidvpiwrapper.dir/build.make avidvpiwrapper/CMakeFiles/avidvpiwrapper.dir/avidvpiwrapper.cpp.s
+	cd /home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/build && $(MAKE) -f avidvpiwrapper/CMakeFiles/avidvpiwrapper.dir/build.make avidvpiwrapper/CMakeFiles/avidvpiwrapper.dir/avidvpiwrapper.cpp.s
 .PHONY : avidvpiwrapper.cpp.s
 
 # Help Target
@@ -225,6 +225,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

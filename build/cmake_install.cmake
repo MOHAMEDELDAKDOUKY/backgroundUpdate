@@ -1,4 +1,4 @@
-# Install script for directory: /media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate
+# Install script for directory: /home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -52,12 +52,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/usr/local/lib" TYPE SHARED_LIBRARY FILES "/media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate/build/libbackgroundupdateplugin.so.0.0.0-test")
+file(INSTALL DESTINATION "/usr/local/lib" TYPE SHARED_LIBRARY FILES "/home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/build/libbackgroundupdateplugin.so.0.0.0-test")
   if(EXISTS "$ENV{DESTDIR}/usr/local/lib/libbackgroundupdateplugin.so.0.0.0-test" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}/usr/local/lib/libbackgroundupdateplugin.so.0.0.0-test")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}/usr/local/lib/libbackgroundupdateplugin.so.0.0.0-test"
-         OLD_RPATH "/opt/nvidia/vpi1/lib64:/opt/nvidia/deepstream/deepstream/lib:/media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/build/avidgstmeta:/media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate/build/avidvpiwrapper:/usr/local/lib:"
+         OLD_RPATH "/opt/nvidia/vpi1/lib64:/opt/nvidia/deepstream/deepstream/lib:/home/avidbeam/dakdouky_ws/atun-gstreamer-runtime/build/avidgstmeta:/home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/build/avidvpiwrapper:/usr/local/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/usr/local/lib/libbackgroundupdateplugin.so.0.0.0-test")
@@ -80,12 +80,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/usr/local/lib" TYPE SHARED_LIBRARY FILES "/media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate/build/libbackgroundupdateplugin.so")
+file(INSTALL DESTINATION "/usr/local/lib" TYPE SHARED_LIBRARY FILES "/home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/build/libbackgroundupdateplugin.so")
   if(EXISTS "$ENV{DESTDIR}/usr/local/lib/libbackgroundupdateplugin.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}/usr/local/lib/libbackgroundupdateplugin.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}/usr/local/lib/libbackgroundupdateplugin.so"
-         OLD_RPATH "/opt/nvidia/vpi1/lib64:/opt/nvidia/deepstream/deepstream/lib:/media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/build/avidgstmeta:/media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate/build/avidvpiwrapper:/usr/local/lib:"
+         OLD_RPATH "/opt/nvidia/vpi1/lib64:/opt/nvidia/deepstream/deepstream/lib:/home/avidbeam/dakdouky_ws/atun-gstreamer-runtime/build/avidgstmeta:/home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/build/avidvpiwrapper:/usr/local/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/usr/local/lib/libbackgroundupdateplugin.so")
@@ -95,8 +95,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/build/avidgstmeta/cmake_install.cmake")
-  include("/media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate/build/avidvpiwrapper/cmake_install.cmake")
+  include("/home/avidbeam/dakdouky_ws/atun-gstreamer-runtime/build/avidgstmeta/cmake_install.cmake")
+  include("/home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/build/avidvpiwrapper/cmake_install.cmake")
 
 endif()
 
@@ -108,5 +108,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

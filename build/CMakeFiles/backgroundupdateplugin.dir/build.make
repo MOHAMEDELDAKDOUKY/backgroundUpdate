@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate
+CMAKE_SOURCE_DIR = /home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate/build
+CMAKE_BINARY_DIR = /home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/backgroundupdateplugin.dir/depend.make
@@ -59,40 +59,70 @@ include CMakeFiles/backgroundupdateplugin.dir/flags.make
 
 CMakeFiles/backgroundupdateplugin.dir/src/BackgroundUpdateImpl.cpp.o: CMakeFiles/backgroundupdateplugin.dir/flags.make
 CMakeFiles/backgroundupdateplugin.dir/src/BackgroundUpdateImpl.cpp.o: ../src/BackgroundUpdateImpl.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/backgroundupdateplugin.dir/src/BackgroundUpdateImpl.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/backgroundupdateplugin.dir/src/BackgroundUpdateImpl.cpp.o -c /media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate/src/BackgroundUpdateImpl.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/backgroundupdateplugin.dir/src/BackgroundUpdateImpl.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/backgroundupdateplugin.dir/src/BackgroundUpdateImpl.cpp.o -c /home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/src/BackgroundUpdateImpl.cpp
 
 CMakeFiles/backgroundupdateplugin.dir/src/BackgroundUpdateImpl.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/backgroundupdateplugin.dir/src/BackgroundUpdateImpl.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate/src/BackgroundUpdateImpl.cpp > CMakeFiles/backgroundupdateplugin.dir/src/BackgroundUpdateImpl.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/src/BackgroundUpdateImpl.cpp > CMakeFiles/backgroundupdateplugin.dir/src/BackgroundUpdateImpl.cpp.i
 
 CMakeFiles/backgroundupdateplugin.dir/src/BackgroundUpdateImpl.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/backgroundupdateplugin.dir/src/BackgroundUpdateImpl.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate/src/BackgroundUpdateImpl.cpp -o CMakeFiles/backgroundupdateplugin.dir/src/BackgroundUpdateImpl.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/src/BackgroundUpdateImpl.cpp -o CMakeFiles/backgroundupdateplugin.dir/src/BackgroundUpdateImpl.cpp.s
 
-CMakeFiles/backgroundupdateplugin.dir/src/saveSurfaceToDisk.cpp.o: CMakeFiles/backgroundupdateplugin.dir/flags.make
-CMakeFiles/backgroundupdateplugin.dir/src/saveSurfaceToDisk.cpp.o: ../src/saveSurfaceToDisk.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/backgroundupdateplugin.dir/src/saveSurfaceToDisk.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/backgroundupdateplugin.dir/src/saveSurfaceToDisk.cpp.o -c /media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate/src/saveSurfaceToDisk.cpp
+CMakeFiles/backgroundupdateplugin.dir/src/median_gpu.cu.o: CMakeFiles/backgroundupdateplugin.dir/flags.make
+CMakeFiles/backgroundupdateplugin.dir/src/median_gpu.cu.o: ../src/median_gpu.cu
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CUDA object CMakeFiles/backgroundupdateplugin.dir/src/median_gpu.cu.o"
+	/usr/local/cuda/bin/nvcc  $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -x cu -c /home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/src/median_gpu.cu -o CMakeFiles/backgroundupdateplugin.dir/src/median_gpu.cu.o
 
-CMakeFiles/backgroundupdateplugin.dir/src/saveSurfaceToDisk.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/backgroundupdateplugin.dir/src/saveSurfaceToDisk.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate/src/saveSurfaceToDisk.cpp > CMakeFiles/backgroundupdateplugin.dir/src/saveSurfaceToDisk.cpp.i
+CMakeFiles/backgroundupdateplugin.dir/src/median_gpu.cu.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CUDA source to CMakeFiles/backgroundupdateplugin.dir/src/median_gpu.cu.i"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_PREPROCESSED_SOURCE
 
-CMakeFiles/backgroundupdateplugin.dir/src/saveSurfaceToDisk.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/backgroundupdateplugin.dir/src/saveSurfaceToDisk.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate/src/saveSurfaceToDisk.cpp -o CMakeFiles/backgroundupdateplugin.dir/src/saveSurfaceToDisk.cpp.s
+CMakeFiles/backgroundupdateplugin.dir/src/median_gpu.cu.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CUDA source to assembly CMakeFiles/backgroundupdateplugin.dir/src/median_gpu.cu.s"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_ASSEMBLY_SOURCE
+
+CMakeFiles/backgroundupdateplugin.dir/src/median_vpi.cpp.o: CMakeFiles/backgroundupdateplugin.dir/flags.make
+CMakeFiles/backgroundupdateplugin.dir/src/median_vpi.cpp.o: ../src/median_vpi.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/backgroundupdateplugin.dir/src/median_vpi.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/backgroundupdateplugin.dir/src/median_vpi.cpp.o -c /home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/src/median_vpi.cpp
+
+CMakeFiles/backgroundupdateplugin.dir/src/median_vpi.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/backgroundupdateplugin.dir/src/median_vpi.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/src/median_vpi.cpp > CMakeFiles/backgroundupdateplugin.dir/src/median_vpi.cpp.i
+
+CMakeFiles/backgroundupdateplugin.dir/src/median_vpi.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/backgroundupdateplugin.dir/src/median_vpi.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/src/median_vpi.cpp -o CMakeFiles/backgroundupdateplugin.dir/src/median_vpi.cpp.s
+
+CMakeFiles/backgroundupdateplugin.dir/src/utils.cpp.o: CMakeFiles/backgroundupdateplugin.dir/flags.make
+CMakeFiles/backgroundupdateplugin.dir/src/utils.cpp.o: ../src/utils.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/backgroundupdateplugin.dir/src/utils.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/backgroundupdateplugin.dir/src/utils.cpp.o -c /home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/src/utils.cpp
+
+CMakeFiles/backgroundupdateplugin.dir/src/utils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/backgroundupdateplugin.dir/src/utils.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/src/utils.cpp > CMakeFiles/backgroundupdateplugin.dir/src/utils.cpp.i
+
+CMakeFiles/backgroundupdateplugin.dir/src/utils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/backgroundupdateplugin.dir/src/utils.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/src/utils.cpp -o CMakeFiles/backgroundupdateplugin.dir/src/utils.cpp.s
 
 # Object files for target backgroundupdateplugin
 backgroundupdateplugin_OBJECTS = \
 "CMakeFiles/backgroundupdateplugin.dir/src/BackgroundUpdateImpl.cpp.o" \
-"CMakeFiles/backgroundupdateplugin.dir/src/saveSurfaceToDisk.cpp.o"
+"CMakeFiles/backgroundupdateplugin.dir/src/median_gpu.cu.o" \
+"CMakeFiles/backgroundupdateplugin.dir/src/median_vpi.cpp.o" \
+"CMakeFiles/backgroundupdateplugin.dir/src/utils.cpp.o"
 
 # External object files for target backgroundupdateplugin
 backgroundupdateplugin_EXTERNAL_OBJECTS =
 
 libbackgroundupdateplugin.so.0.0.0-test: CMakeFiles/backgroundupdateplugin.dir/src/BackgroundUpdateImpl.cpp.o
-libbackgroundupdateplugin.so.0.0.0-test: CMakeFiles/backgroundupdateplugin.dir/src/saveSurfaceToDisk.cpp.o
+libbackgroundupdateplugin.so.0.0.0-test: CMakeFiles/backgroundupdateplugin.dir/src/median_gpu.cu.o
+libbackgroundupdateplugin.so.0.0.0-test: CMakeFiles/backgroundupdateplugin.dir/src/median_vpi.cpp.o
+libbackgroundupdateplugin.so.0.0.0-test: CMakeFiles/backgroundupdateplugin.dir/src/utils.cpp.o
 libbackgroundupdateplugin.so.0.0.0-test: CMakeFiles/backgroundupdateplugin.dir/build.make
 libbackgroundupdateplugin.so.0.0.0-test: /usr/lib/x86_64-linux-gnu/libopencv_stitching.so.4.2.0
 libbackgroundupdateplugin.so.0.0.0-test: /usr/lib/x86_64-linux-gnu/libopencv_aruco.so.4.2.0
@@ -127,7 +157,7 @@ libbackgroundupdateplugin.so.0.0.0-test: /opt/nvidia/deepstream/deepstream/lib/l
 libbackgroundupdateplugin.so.0.0.0-test: /opt/nvidia/deepstream/deepstream/lib/libnvdsgst_meta.so
 libbackgroundupdateplugin.so.0.0.0-test: /opt/nvidia/deepstream/deepstream/lib/libnvds_meta.so
 libbackgroundupdateplugin.so.0.0.0-test: /opt/nvidia/deepstream/deepstream/lib/libnvds_infer.so
-libbackgroundupdateplugin.so.0.0.0-test: /media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/build/avidgstmeta/libavidgstmeta.so
+libbackgroundupdateplugin.so.0.0.0-test: /home/avidbeam/dakdouky_ws/atun-gstreamer-runtime/build/avidgstmeta/libavidgstmeta.so
 libbackgroundupdateplugin.so.0.0.0-test: avidvpiwrapper/libavidvpiwrapper.so
 libbackgroundupdateplugin.so.0.0.0-test: /usr/lib/x86_64-linux-gnu/libopencv_highgui.so.4.2.0
 libbackgroundupdateplugin.so.0.0.0-test: /usr/lib/x86_64-linux-gnu/libopencv_datasets.so.4.2.0
@@ -157,7 +187,7 @@ libbackgroundupdateplugin.so.0.0.0-test: /opt/nvidia/deepstream/deepstream/lib/l
 libbackgroundupdateplugin.so.0.0.0-test: /opt/nvidia/deepstream/deepstream/lib/libnvds_infer.so
 libbackgroundupdateplugin.so.0.0.0-test: /opt/nvidia/vpi1/lib64/libnvvpi.so.1.2.3
 libbackgroundupdateplugin.so.0.0.0-test: CMakeFiles/backgroundupdateplugin.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library libbackgroundupdateplugin.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX shared library libbackgroundupdateplugin.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/backgroundupdateplugin.dir/link.txt --verbose=$(VERBOSE)
 	$(CMAKE_COMMAND) -E cmake_symlink_library libbackgroundupdateplugin.so.0.0.0-test libbackgroundupdateplugin.so.0.0.0-test libbackgroundupdateplugin.so
 
@@ -174,6 +204,6 @@ CMakeFiles/backgroundupdateplugin.dir/clean:
 .PHONY : CMakeFiles/backgroundupdateplugin.dir/clean
 
 CMakeFiles/backgroundupdateplugin.dir/depend:
-	cd /media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate /media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate /media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate/build /media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate/build /media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate/build/CMakeFiles/backgroundupdateplugin.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate /home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate /home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/build /home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/build /home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/build/CMakeFiles/backgroundupdateplugin.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/backgroundupdateplugin.dir/depend
 

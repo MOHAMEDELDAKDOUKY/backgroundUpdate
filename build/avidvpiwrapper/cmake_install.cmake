@@ -1,4 +1,4 @@
-# Install script for directory: /media/avidbeam/workspace/Nadia-Ws/atun-gstreamer-runtime/avidvpiwrapper
+# Install script for directory: /home/avidbeam/dakdouky_ws/atun-gstreamer-runtime/avidvpiwrapper
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -52,7 +52,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/usr/local/lib" TYPE SHARED_LIBRARY FILES "/media/avidbeam/workspace/dakdouky_ws/left_object_detection/backgroundUpdate/build/avidvpiwrapper/libavidvpiwrapper.so")
+file(INSTALL DESTINATION "/usr/local/lib" TYPE SHARED_LIBRARY FILES "/home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/build/avidvpiwrapper/libavidvpiwrapper.so")
   if(EXISTS "$ENV{DESTDIR}/usr/local/lib/libavidvpiwrapper.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}/usr/local/lib/libavidvpiwrapper.so")
     file(RPATH_CHANGE

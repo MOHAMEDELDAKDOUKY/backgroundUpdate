@@ -9,6 +9,7 @@
 #include "nvbufsurface.h"
 #include "nvbufsurftransform.h"
 #include <opencv2/opencv.hpp>
+#include "utils.hpp"
 
 #include <vector>
 
@@ -24,8 +25,7 @@ class BackgroundUpdateImpl : public avid::AvidPlugin {
 
   std::set<int> unuique_object_ids;
 
-  std::vector<NvBufSurface*> record; 
-  
+  std::vector <NvBufSurface*> record; 
   
 };
 
@@ -33,6 +33,12 @@ extern "C" {
 avid::AvidPlugin *create_instance() { return new BackgroundUpdateImpl(); }
 }
 
-extern void median_filter_wrapper(const cv::Mat &input, cv::Mat &output);
+extern "C" {
+void median_filter_wrapper(const cv::Mat &input, cv::Mat &output);
+}
+
+extern "C" {
+void median_filter(NvBufSurface *src, NvBufSurface* dst, std::vector <NvBufSurface*> record);
+}
 
 
