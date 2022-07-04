@@ -73,7 +73,7 @@ CMakeFiles/backgroundupdateplugin.dir/src/BackgroundUpdateImpl.cpp.s: cmake_forc
 CMakeFiles/backgroundupdateplugin.dir/src/median_gpu.cu.o: CMakeFiles/backgroundupdateplugin.dir/flags.make
 CMakeFiles/backgroundupdateplugin.dir/src/median_gpu.cu.o: ../src/median_gpu.cu
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CUDA object CMakeFiles/backgroundupdateplugin.dir/src/median_gpu.cu.o"
-	/usr/local/cuda/bin/nvcc  $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -x cu -c /home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/src/median_gpu.cu -o CMakeFiles/backgroundupdateplugin.dir/src/median_gpu.cu.o
+	/usr/local/cuda/bin/nvcc  $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -x cu -dc /home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/src/median_gpu.cu -o CMakeFiles/backgroundupdateplugin.dir/src/median_gpu.cu.o
 
 CMakeFiles/backgroundupdateplugin.dir/src/median_gpu.cu.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CUDA source to CMakeFiles/backgroundupdateplugin.dir/src/median_gpu.cu.i"
@@ -108,6 +108,92 @@ CMakeFiles/backgroundupdateplugin.dir/src/utils.cpp.i: cmake_force
 CMakeFiles/backgroundupdateplugin.dir/src/utils.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/backgroundupdateplugin.dir/src/utils.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/src/utils.cpp -o CMakeFiles/backgroundupdateplugin.dir/src/utils.cpp.s
+
+# Object files for target backgroundupdateplugin
+backgroundupdateplugin_OBJECTS = \
+"CMakeFiles/backgroundupdateplugin.dir/src/BackgroundUpdateImpl.cpp.o" \
+"CMakeFiles/backgroundupdateplugin.dir/src/median_gpu.cu.o" \
+"CMakeFiles/backgroundupdateplugin.dir/src/median_vpi.cpp.o" \
+"CMakeFiles/backgroundupdateplugin.dir/src/utils.cpp.o"
+
+# External object files for target backgroundupdateplugin
+backgroundupdateplugin_EXTERNAL_OBJECTS =
+
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: CMakeFiles/backgroundupdateplugin.dir/src/BackgroundUpdateImpl.cpp.o
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: CMakeFiles/backgroundupdateplugin.dir/src/median_gpu.cu.o
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: CMakeFiles/backgroundupdateplugin.dir/src/median_vpi.cpp.o
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: CMakeFiles/backgroundupdateplugin.dir/src/utils.cpp.o
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: CMakeFiles/backgroundupdateplugin.dir/build.make
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_stitching.so.4.2.0
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_aruco.so.4.2.0
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_bgsegm.so.4.2.0
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_bioinspired.so.4.2.0
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_ccalib.so.4.2.0
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_dnn_objdetect.so.4.2.0
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_dnn_superres.so.4.2.0
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_dpm.so.4.2.0
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_face.so.4.2.0
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_freetype.so.4.2.0
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_fuzzy.so.4.2.0
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_hdf.so.4.2.0
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_hfs.so.4.2.0
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_img_hash.so.4.2.0
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_line_descriptor.so.4.2.0
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_quality.so.4.2.0
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_reg.so.4.2.0
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_rgbd.so.4.2.0
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_saliency.so.4.2.0
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_shape.so.4.2.0
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_stereo.so.4.2.0
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_structured_light.so.4.2.0
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_superres.so.4.2.0
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_surface_matching.so.4.2.0
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_tracking.so.4.2.0
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_videostab.so.4.2.0
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_viz.so.4.2.0
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_xobjdetect.so.4.2.0
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_xphoto.so.4.2.0
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /opt/nvidia/deepstream/deepstream/lib/libnvdsgst_helper.so
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /opt/nvidia/deepstream/deepstream/lib/libnvdsgst_meta.so
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /opt/nvidia/deepstream/deepstream/lib/libnvds_meta.so
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /opt/nvidia/deepstream/deepstream/lib/libnvds_infer.so
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /home/avidbeam/dakdouky_ws/atun-gstreamer-runtime/build/avidgstmeta/libavidgstmeta.so
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: avidvpiwrapper/libavidvpiwrapper.so
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_highgui.so.4.2.0
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_datasets.so.4.2.0
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_plot.so.4.2.0
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_text.so.4.2.0
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_dnn.so.4.2.0
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_ml.so.4.2.0
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_phase_unwrapping.so.4.2.0
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_optflow.so.4.2.0
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_ximgproc.so.4.2.0
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_video.so.4.2.0
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_videoio.so.4.2.0
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so.4.2.0
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_objdetect.so.4.2.0
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_calib3d.so.4.2.0
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_features2d.so.4.2.0
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_flann.so.4.2.0
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_photo.so.4.2.0
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.4.2.0
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_core.so.4.2.0
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /usr/local/lib/libprotobuf.so
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /opt/nvidia/deepstream/deepstream/lib/libnvbufsurface.so
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /opt/nvidia/deepstream/deepstream/lib/libnvbufsurftransform.so
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /opt/nvidia/deepstream/deepstream/lib/libnvdsgst_helper.so
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /opt/nvidia/deepstream/deepstream/lib/libnvdsgst_meta.so
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /opt/nvidia/deepstream/deepstream/lib/libnvds_meta.so
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /opt/nvidia/deepstream/deepstream/lib/libnvds_infer.so
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: /opt/nvidia/vpi1/lib64/libnvvpi.so.1.2.3
+CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o: CMakeFiles/backgroundupdateplugin.dir/dlink.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CUDA device code CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o"
+	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/backgroundupdateplugin.dir/dlink.txt --verbose=$(VERBOSE)
+
+# Rule to build all files generated by this target.
+CMakeFiles/backgroundupdateplugin.dir/build: CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o
+
+.PHONY : CMakeFiles/backgroundupdateplugin.dir/build
 
 # Object files for target backgroundupdateplugin
 backgroundupdateplugin_OBJECTS = \
@@ -186,8 +272,9 @@ libbackgroundupdateplugin.so.0.0.0-test: /opt/nvidia/deepstream/deepstream/lib/l
 libbackgroundupdateplugin.so.0.0.0-test: /opt/nvidia/deepstream/deepstream/lib/libnvds_meta.so
 libbackgroundupdateplugin.so.0.0.0-test: /opt/nvidia/deepstream/deepstream/lib/libnvds_infer.so
 libbackgroundupdateplugin.so.0.0.0-test: /opt/nvidia/vpi1/lib64/libnvvpi.so.1.2.3
+libbackgroundupdateplugin.so.0.0.0-test: CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o
 libbackgroundupdateplugin.so.0.0.0-test: CMakeFiles/backgroundupdateplugin.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX shared library libbackgroundupdateplugin.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX shared library libbackgroundupdateplugin.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/backgroundupdateplugin.dir/link.txt --verbose=$(VERBOSE)
 	$(CMAKE_COMMAND) -E cmake_symlink_library libbackgroundupdateplugin.so.0.0.0-test libbackgroundupdateplugin.so.0.0.0-test libbackgroundupdateplugin.so
 

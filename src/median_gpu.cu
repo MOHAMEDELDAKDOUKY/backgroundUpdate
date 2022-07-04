@@ -49,6 +49,22 @@ __device__ void sort_bubble(uint8_t *x, int n_size)
 	}
 }
 
+
+__device__ void sort_insertion(uint8_t* x , int n_size)
+{
+    for(int k=1; k<n_size; k++)   
+    {  
+        int temp = x[k];  
+        int j= k-1;  
+        while(j>=0 && temp <= x[j])  
+        {  
+            x[j+1] = x[j];   
+            j = j-1;  
+        }  
+        x[j+1] = temp;  
+    } 
+
+}
 __device__ void sort_linear(float *x, int n_size)
 {
 	for (int i = 0; i < n_size - 1; i++)
@@ -95,17 +111,9 @@ __global__ void sort_kernel(uint8_t* windowMedian)
        windowMedian[threadIdx.x * ipt + k] = thread_keys[k];
 }
 
-#define gpuErrchk(ans) { gpuAssert((ans), __FILE__, __LINE__); }
-inline void gpuAssert(cudaError_t code, const char *file, int line, bool abort=true)
-{
-   if (code != cudaSuccess) 
-   {
-      fprintf(stderr,"GPUassert: %s %s %d\n", cudaGetErrorString(code), file, line);
-      if (abort) exit(code);
-   }
-}
 
-__global__ void across_frame_median_filter(uint8_t **recordDEV,
+
+__global__ void across_frame_median_filter(uint8_t **recordDEV, int RECORD_LENGTH,
 										   uint8_t *src_ptr, int src_pitch,
 										   uint8_t *dst_ptr, int dst_pitch,
 										   int dst_width, int dst_height,
@@ -117,7 +125,7 @@ __global__ void across_frame_median_filter(uint8_t **recordDEV,
 	const int y = blockIdx.y * blockDim.y + threadIdx.y;
     //printf("kernel >>>> x: %d y: %d dst_width: %d dst_height: %d  color_component: %d\n ", x,y, dst_width, dst_height, color_component);
     
-	uint8_t windowMedian[RECORD_LENGTH]; 
+	uint8_t *windowMedian = (uint8_t*)malloc(RECORD_LENGTH * sizeof(uint8_t)); 
 
 	if ((x < dst_width) && (y < dst_height))
 	{
@@ -130,16 +138,16 @@ __global__ void across_frame_median_filter(uint8_t **recordDEV,
 		{
 			windowMedian[windowElements] = *(recordDEV[windowElements] + dst_offset);
 		}
-        //thrust::sort(thrust::device, windowMedian, windowMedian + windowElements);
 
-		sort_bubble(windowMedian,windowElements);
-		//sort_linear(windowMedian,windowElements);
-		//sort_quick(windowMedian,0,windowElements);
+		
+		sort_insertion(windowMedian,windowElements);
 
-        //sort_kernel<<<blks,tpb>>>(windowMedianDEV);
+		for (windowElements = 0; windowElements < RECORD_LENGTH; windowElements++)
+		{
+			*(recordDEV[windowElements] + dst_offset) = windowMedian[windowElements]; 
+		}
 
-	    *(dst_ptr + dst_offset) = windowMedian[windowElements/2];
-
+		free(windowMedian); 
 	}
 }
 
@@ -147,8 +155,9 @@ __global__ void across_frame_median_filter(uint8_t **recordDEV,
 extern "C" void median_filter(NvBufSurface *src, NvBufSurface *dst,
 							  std::vector<NvBufSurface *> record)
 {
+    int RECORD_LENGTH = record.size();
 
-	uint8_t *recordCPU[RECORD_LENGTH];
+	uint8_t **recordCPU = (uint8_t **) malloc( RECORD_LENGTH* sizeof(uint8_t *));
 
 	for (int i = 0; i < RECORD_LENGTH; i++)
 	{
@@ -176,7 +185,7 @@ extern "C" void median_filter(NvBufSurface *src, NvBufSurface *dst,
 
 	for (int color_componenet = 0; color_componenet <= 4; color_componenet++)
 	{
-		across_frame_median_filter<<<grid, block>>>(recordDEV,
+		across_frame_median_filter<<<grid, block>>>(recordDEV, RECORD_LENGTH,  
 												  src_ptr, src_pitch,
 												  dst_ptr, dst_pitch,
 												  output_cols, output_rows,
@@ -184,7 +193,7 @@ extern "C" void median_filter(NvBufSurface *src, NvBufSurface *dst,
 	}
 	
 	cudaDeviceSynchronize();
-
+    free(recordCPU);
 	cudaFree(recordDEV);
 }
 

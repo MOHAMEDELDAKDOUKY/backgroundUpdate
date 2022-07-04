@@ -330,12 +330,6 @@ nvdspreprocess_meta.h
 time.h
 -
 
-/home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/src/median_vpi.cpp
-
-/home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/src/utils.cpp
-utils.hpp
-/home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/src/utils.hpp
-
 /opt/nvidia/deepstream/deepstream/sources/includes/gstnvdsmeta.h
 gst/gst.h
 -

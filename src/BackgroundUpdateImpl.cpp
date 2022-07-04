@@ -36,16 +36,11 @@ void BackgroundUpdateImpl::onFrame(NvBufSurface *p_surface, NvDsFrameMeta *p_fra
 {
   static bool once = true;
   // if (!once) return;
-  if (once)
-    once = false;
+
 
   std::cout << std::endl;
 
   bool frame_has_obj = false;
-
-  // median_filter_wrapper(input, output_gpu);
-  //  std::cout << output_gpu.size();
-  //  cv::imwrite("gpu_median_result.png", output_gpu);
 
   NvDsObjectMeta *obj_meta = NULL;
 
@@ -53,7 +48,7 @@ void BackgroundUpdateImpl::onFrame(NvBufSurface *p_surface, NvDsFrameMeta *p_fra
 
   NvDsMetaList *l_obj = NULL;
 
-  NvBufSurface *dst_buf = NULL;
+  static NvBufSurface *dst_buf = NULL;
   NvBufSurface *rec_buf = NULL;
 
   int offset = 0;
@@ -74,21 +69,21 @@ void BackgroundUpdateImpl::onFrame(NvBufSurface *p_surface, NvDsFrameMeta *p_fra
 
   rec_buf = allocate_surface(p_surface);
   record.push_back(rec_buf);
-  const int RECORD_LENGTH = 1024; 
-  if (frame_number == RECORD_LENGTH-1)
+  const int RECORD_LENGTH = (int)record.size(); 
+  
+  #include <time.h>
+  clock_t tStart = clock();
+  if (once)
   {
+    once = false;
     dst_buf = allocate_surface(p_surface);
-    printf(" main: output_rows: %d output_cols: %d dst_pitch: %d src_pitch: %d \n ",
-      dst_buf->surfaceList->height,dst_buf->surfaceList->width, dst_buf->surfaceList->pitch,p_surface->surfaceList->pitch );
+    std::cout<< "allocated dst surface...\n";  
+  }
+  median_filter(p_surface, dst_buf, record);   
 
-    #include <time.h>
-    clock_t tStart = clock();
-
-    median_filter(p_surface, dst_buf, record);   
-    
-    printf("\n\n\nTime taken: %.2fs\n\n\n", (double)(clock() - tStart)/CLOCKS_PER_SEC);
-
-    save_to_disk(dst_buf);
+  if (frame_number == 150-1)
+  {
+    save_to_disk(record[RECORD_LENGTH/2]);
 
 
     for (auto rec : record)
@@ -97,6 +92,7 @@ void BackgroundUpdateImpl::onFrame(NvBufSurface *p_surface, NvDsFrameMeta *p_fra
     }
     NvBufSurfaceDestroy(dst_buf);  
     std::cout << "freed once" << std::endl; 
+    printf("\n\n\nTime taken: %.2fs\n\n\n", (double)(clock() - tStart)/CLOCKS_PER_SEC);
 
   throw std::runtime_error (" "); 
   }

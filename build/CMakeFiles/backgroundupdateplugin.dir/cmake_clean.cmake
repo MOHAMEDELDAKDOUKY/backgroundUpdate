@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/backgroundupdateplugin.dir/cmake_device_link.o"
   "CMakeFiles/backgroundupdateplugin.dir/src/BackgroundUpdateImpl.cpp.o"
   "CMakeFiles/backgroundupdateplugin.dir/src/median_gpu.cu.o"
   "CMakeFiles/backgroundupdateplugin.dir/src/median_vpi.cpp.o"
