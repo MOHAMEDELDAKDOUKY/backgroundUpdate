@@ -1,7 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/backgroundupdateplugin.dir/src/BackgroundUpdateImpl.cpp.o"
   "CMakeFiles/backgroundupdateplugin.dir/src/median_gpu.cu.o"
-  "CMakeFiles/backgroundupdateplugin.dir/src/median_vpi.cpp.o"
   "CMakeFiles/backgroundupdateplugin.dir/src/utils.cpp.o"
   "libbackgroundupdateplugin.pdb"
   "libbackgroundupdateplugin.so"

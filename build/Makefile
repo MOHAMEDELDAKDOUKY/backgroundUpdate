@@ -262,33 +262,6 @@ src/median_gpu.cu.s:
 	$(MAKE) -f CMakeFiles/backgroundupdateplugin.dir/build.make CMakeFiles/backgroundupdateplugin.dir/src/median_gpu.cu.s
 .PHONY : src/median_gpu.cu.s
 
-src/median_vpi.o: src/median_vpi.cpp.o
-
-.PHONY : src/median_vpi.o
-
-# target to build an object file
-src/median_vpi.cpp.o:
-	$(MAKE) -f CMakeFiles/backgroundupdateplugin.dir/build.make CMakeFiles/backgroundupdateplugin.dir/src/median_vpi.cpp.o
-.PHONY : src/median_vpi.cpp.o
-
-src/median_vpi.i: src/median_vpi.cpp.i
-
-.PHONY : src/median_vpi.i
-
-# target to preprocess a source file
-src/median_vpi.cpp.i:
-	$(MAKE) -f CMakeFiles/backgroundupdateplugin.dir/build.make CMakeFiles/backgroundupdateplugin.dir/src/median_vpi.cpp.i
-.PHONY : src/median_vpi.cpp.i
-
-src/median_vpi.s: src/median_vpi.cpp.s
-
-.PHONY : src/median_vpi.s
-
-# target to generate assembly for a file
-src/median_vpi.cpp.s:
-	$(MAKE) -f CMakeFiles/backgroundupdateplugin.dir/build.make CMakeFiles/backgroundupdateplugin.dir/src/median_vpi.cpp.s
-.PHONY : src/median_vpi.cpp.s
-
 src/utils.o: src/utils.cpp.o
 
 .PHONY : src/utils.o
@@ -338,9 +311,6 @@ help:
 	@echo "... src/median_gpu.o"
 	@echo "... src/median_gpu.i"
 	@echo "... src/median_gpu.s"
-	@echo "... src/median_vpi.o"
-	@echo "... src/median_vpi.i"
-	@echo "... src/median_vpi.s"
 	@echo "... src/utils.o"
 	@echo "... src/utils.i"
 	@echo "... src/utils.s"

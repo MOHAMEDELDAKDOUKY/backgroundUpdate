@@ -557,8 +557,6 @@ CMakeFiles/backgroundupdateplugin.dir/src/BackgroundUpdateImpl.cpp.o: /usr/local
 CMakeFiles/backgroundupdateplugin.dir/src/BackgroundUpdateImpl.cpp.o: /usr/local/cuda-11.4/targets/x86_64-linux/include/vector_functions.hpp
 CMakeFiles/backgroundupdateplugin.dir/src/BackgroundUpdateImpl.cpp.o: /usr/local/cuda-11.4/targets/x86_64-linux/include/vector_types.h
 
-CMakeFiles/backgroundupdateplugin.dir/src/median_vpi.cpp.o: ../src/median_vpi.cpp
-
 CMakeFiles/backgroundupdateplugin.dir/src/utils.cpp.o: ../include/nvbufsurface.h
 CMakeFiles/backgroundupdateplugin.dir/src/utils.cpp.o: ../include/utils.hpp
 CMakeFiles/backgroundupdateplugin.dir/src/utils.cpp.o: /home/avidbeam/dakdouky_ws/atun-gstreamer-runtime/build/avidgstmeta/proto-src/event.pb.h

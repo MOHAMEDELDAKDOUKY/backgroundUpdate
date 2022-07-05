@@ -117,12 +117,12 @@ CMakeFiles/backgroundupdateplugin.dir/all: /home/avidbeam/dakdouky_ws/atun-gstre
 CMakeFiles/backgroundupdateplugin.dir/all: avidvpiwrapper/CMakeFiles/avidvpiwrapper.dir/all
 	$(MAKE) -f CMakeFiles/backgroundupdateplugin.dir/build.make CMakeFiles/backgroundupdateplugin.dir/depend
 	$(MAKE) -f CMakeFiles/backgroundupdateplugin.dir/build.make CMakeFiles/backgroundupdateplugin.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/build/CMakeFiles --progress-num=35,36,37,38,39 "Built target backgroundupdateplugin"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/build/CMakeFiles --progress-num=35,36,37,38 "Built target backgroundupdateplugin"
 .PHONY : CMakeFiles/backgroundupdateplugin.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/backgroundupdateplugin.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/build/CMakeFiles 39
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/build/CMakeFiles 38
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/backgroundupdateplugin.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/avidbeam/dakdouky_ws/left_object_detection/backgroundUpdate/build/CMakeFiles 0
 .PHONY : CMakeFiles/backgroundupdateplugin.dir/rule

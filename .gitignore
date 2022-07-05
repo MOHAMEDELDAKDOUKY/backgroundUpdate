@@ -1,2 +1,4 @@
 images/
 *.mp4
+build/
+cmake/

@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <thrust/sort.h>
 
-
 const int BLOCKDIM = 16;
 //__device__ const int FILTER_SIZE = 9;
 //__device__ const int FILTER_HALFSIZE = FILTER_SIZE >> 1;
@@ -67,57 +66,49 @@ __device__ void sort_linear(float *x, int n_size)
 
 //#include <cub/cub.cuh>
 #include <stdio.h>
+#include <thrust/sort.h>
+#include <thrust/execution_policy.h>
 
-const int ipt=8;
-const int tpb=128;
-const int blks = 1; 
+const int ipt = 8;
+const int tpb = 128;
+const int blks = 1;
 
-
-__global__ void sort_kernel(uint8_t* windowMedian)
+__global__ void sort_kernel(uint8_t *windowMedian)
 {
-    // Specialize BlockRadixSort for a 1D block of 128 threads owning 8 integer items each
-    typedef cub::BlockRadixSort<uint8_t, tpb, ipt> BlockRadixSort;
-    // Allocate shared memory for BlockRadixSort
-    __shared__ typename BlockRadixSort::TempStorage temp_storage;
-    //Obtain a segment of consecutive items that are blocked across threads
-    uint8_t thread_keys[ipt];
+	// Specialize BlockRadixSort for a 1D block of 128 threads owning 8 integer items each
+	typedef cub::BlockRadixSort<uint8_t, tpb, ipt> BlockRadixSort;
+	// Allocate shared memory for BlockRadixSort
+	__shared__ typename BlockRadixSort::TempStorage temp_storage;
+	// Obtain a segment of consecutive items that are blocked across threads
+	uint8_t thread_keys[ipt];
 
-    for (int k = 0; k < ipt; k++) 
-    {   
-		//printf("\n %d", windowMedian[threadIdx.x * ipt + k]); 
-        thread_keys[k] = windowMedian[threadIdx.x * ipt + k];
-    }
-    // Collectively sort the keys
-    BlockRadixSort(temp_storage).Sort(thread_keys);
-    __syncthreads();
-    // write results to output array
-    for (int k = 0; k < ipt; k++) 
-       windowMedian[threadIdx.x * ipt + k] = thread_keys[k];
+	for (int k = 0; k < ipt; k++)
+	{
+		// printf("\n %d", windowMedian[threadIdx.x * ipt + k]);
+		thread_keys[k] = windowMedian[threadIdx.x * ipt + k];
+	}
+	// Collectively sort the keys
+	BlockRadixSort(temp_storage).Sort(thread_keys);
+	__syncthreads();
+	// write results to output array
+	for (int k = 0; k < ipt; k++)
+		windowMedian[threadIdx.x * ipt + k] = thread_keys[k];
 }
 
-#define gpuErrchk(ans) { gpuAssert((ans), __FILE__, __LINE__); }
-inline void gpuAssert(cudaError_t code, const char *file, int line, bool abort=true)
-{
-   if (code != cudaSuccess) 
-   {
-      fprintf(stderr,"GPUassert: %s %s %d\n", cudaGetErrorString(code), file, line);
-      if (abort) exit(code);
-   }
-}
 
-__global__ void across_frame_median_filter(uint8_t **recordDEV,
-										   uint8_t *src_ptr, int src_pitch,
-										   uint8_t *dst_ptr, int dst_pitch,
-										   int dst_width, int dst_height,
-										   int color_component)
+__global__ void temporal_median_filter(uint8_t **recordDEV,
+									   uint8_t *src_ptr, int src_pitch,
+									   uint8_t *dst_ptr, int dst_pitch,
+									   int dst_width, int dst_height,
+									   int color_component)
 {
-    //printf("kernel >>>>>\n");
+	// printf("kernel >>>>>\n");
 
 	const int x = blockIdx.x * blockDim.x + threadIdx.x;
 	const int y = blockIdx.y * blockDim.y + threadIdx.y;
-    //printf("kernel >>>> x: %d y: %d dst_width: %d dst_height: %d  color_component: %d\n ", x,y, dst_width, dst_height, color_component);
-    
-	uint8_t windowMedian[RECORD_LENGTH]; 
+	// printf("kernel >>>> x: %d y: %d dst_width: %d dst_height: %d  color_component: %d\n ", x,y, dst_width, dst_height, color_component);
+
+	uint8_t windowMedian[RECORD_LENGTH];
 
 	if ((x < dst_width) && (y < dst_height))
 	{
@@ -128,21 +119,32 @@ __global__ void across_frame_median_filter(uint8_t **recordDEV,
 
 		for (windowElements = 0; windowElements < RECORD_LENGTH; windowElements++)
 		{
-			windowMedian[windowElements] = *(recordDEV[windowElements] + dst_offset);
+			// windowMedian[windowElements] = *(recordDEV[windowElements] + dst_offset);
+			// printf(" %d, %d \n", windowMedian[windowElements] , *(recordDEV[windowElements] + dst_offset));
 		}
-        //thrust::sort(thrust::device, windowMedian, windowMedian + windowElements);
+		// thrust::sort_by_key(thrust::device, a, a+123, b);
 
-		sort_bubble(windowMedian,windowElements);
-		//sort_linear(windowMedian,windowElements);
-		//sort_quick(windowMedian,0,windowElements);
+		// thrust::sort(thrust::device, windowMedian, windowMedian + windowElements);
 
-        //sort_kernel<<<blks,tpb>>>(windowMedianDEV);
+		double a[123];
+		int b[123];
+		for (int i = 0; i < 123; i++)
+		{
+			b[i] = 123 - i;
+			a[i] = 123 - i;
+		}
+		thrust::sort(thrust::device, a, a + 123);
 
-	    *(dst_ptr + dst_offset) = windowMedian[windowElements/2];
 
+		// sort_bubble(windowMedian,windowElements);
+		// sort_linear(windowMedian,windowElements);
+		// sort_quick(windowMedian,0,windowElements);
+
+		// sort_kernel<<<blks,tpb>>>(windowMedianDEV);
+		// printf("%d \n", (int)windowMedian[windowElements/2]);
+		//*(dst_ptr + dst_offset) = windowMedian[windowElements/2];
 	}
 }
-
 
 extern "C" void median_filter(NvBufSurface *src, NvBufSurface *dst,
 							  std::vector<NvBufSurface *> record)
@@ -172,24 +174,19 @@ extern "C" void median_filter(NvBufSurface *src, NvBufSurface *dst,
 	const dim3 block(BLOCKDIM, BLOCKDIM);
 	const dim3 grid(output_cols / BLOCKDIM, output_rows / BLOCKDIM);
 
-
-
 	for (int color_componenet = 0; color_componenet <= 4; color_componenet++)
 	{
-		across_frame_median_filter<<<grid, block>>>(recordDEV,
-												  src_ptr, src_pitch,
-												  dst_ptr, dst_pitch,
-												  output_cols, output_rows,
-												  color_componenet);
+		temporal_median_filter<<<grid, block>>>(recordDEV,
+												src_ptr, src_pitch,
+												dst_ptr, dst_pitch,
+												output_cols, output_rows,
+												color_componenet);
 	}
-	
+
 	cudaDeviceSynchronize();
 
 	cudaFree(recordDEV);
 }
-
-
-
 
 // from here: https://stackoverflow.com/questions/64441827/cuda-thrustsort-met-memory-problem-when-i-still-have-enough-memory
 // cudaError_t err = cudaDeviceSetLimit(cudaLimitMallocHeapSize, 1048576ULL*1024);
