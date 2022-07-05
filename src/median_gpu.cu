@@ -3,7 +3,7 @@
 #include <thrust/sort.h>
 
 
-const int BLOCKDIM = 8;
+const int BLOCKDIM = 16;
 //__device__ const int FILTER_SIZE = 9;
 //__device__ const int FILTER_HALFSIZE = FILTER_SIZE >> 1;
 
