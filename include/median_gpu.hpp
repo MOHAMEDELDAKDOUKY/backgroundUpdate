@@ -6,4 +6,4 @@
 #include "helper_cuda.h"
 #include "nvbufsurface.h"
 
-const int  RECORD_LENGTH =1024; 
+const int  RECORD_LENGTH =128; 

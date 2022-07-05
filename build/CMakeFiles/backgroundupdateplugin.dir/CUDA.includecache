@@ -59,12 +59,6 @@ stdio.h
 -
 thrust/sort.h
 -
-stdio.h
--
-thrust/sort.h
--
-thrust/execution_policy.h
--
 
 /usr/include/opencv4/opencv2/calib3d.hpp
 opencv2/core.hpp

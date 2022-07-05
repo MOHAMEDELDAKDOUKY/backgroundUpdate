@@ -48,6 +48,21 @@ __device__ void sort_bubble(uint8_t *x, int n_size)
 	}
 }
 
+__device__ void sort_insertion(uint8_t *x, int n_size)
+{
+	for (int k = 1; k < n_size; k++)
+	{
+		int temp = x[k];
+		int j = k - 1;
+		while (j >= 0 && temp <= x[j])
+		{
+			x[j + 1] = x[j];
+			j = j - 1;
+		}
+		x[j + 1] = temp;
+	}
+}
+
 __device__ void sort_linear(float *x, int n_size)
 {
 	for (int i = 0; i < n_size - 1; i++)
@@ -64,14 +79,18 @@ __device__ void sort_linear(float *x, int n_size)
 	}
 }
 
-//#include <cub/cub.cuh>
-#include <stdio.h>
-#include <thrust/sort.h>
-#include <thrust/execution_policy.h>
+__device__ void swap(uint8_t &a, uint8_t &b)
+{
+   uint8_t temp; 
+   temp = a; 
+   a = b; 
+   b = temp; 
+}
 
 const int ipt = 8;
 const int tpb = 128;
 const int blks = 1;
+
 
 __global__ void sort_kernel(uint8_t *windowMedian)
 {
@@ -102,12 +121,13 @@ __global__ void temporal_median_filter(uint8_t **recordDEV,
 									   int dst_width, int dst_height,
 									   int color_component)
 {
-	// printf("kernel >>>>>\n");
+	//printf("kernel >>>>>\n");
 
 	const int x = blockIdx.x * blockDim.x + threadIdx.x;
 	const int y = blockIdx.y * blockDim.y + threadIdx.y;
 	// printf("kernel >>>> x: %d y: %d dst_width: %d dst_height: %d  color_component: %d\n ", x,y, dst_width, dst_height, color_component);
 
+	// uint8_t windowMedian[RECORD_LENGTH];
 	uint8_t windowMedian[RECORD_LENGTH];
 
 	if ((x < dst_width) && (y < dst_height))
@@ -119,30 +139,27 @@ __global__ void temporal_median_filter(uint8_t **recordDEV,
 
 		for (windowElements = 0; windowElements < RECORD_LENGTH; windowElements++)
 		{
-			// windowMedian[windowElements] = *(recordDEV[windowElements] + dst_offset);
+			windowMedian[windowElements] = *(recordDEV[windowElements] + dst_offset);
 			// printf(" %d, %d \n", windowMedian[windowElements] , *(recordDEV[windowElements] + dst_offset));
 		}
-		// thrust::sort_by_key(thrust::device, a, a+123, b);
 
-		// thrust::sort(thrust::device, windowMedian, windowMedian + windowElements);
-
-		double a[123];
-		int b[123];
-		for (int i = 0; i < 123; i++)
-		{
-			b[i] = 123 - i;
-			a[i] = 123 - i;
-		}
-		thrust::sort(thrust::device, a, a + 123);
+		// sort_insertion(windowMedian,windowElements);
+		
+		// for 128 frame -> Time taken: 0.32s
+		//thrust::sort(thrust::device, windowMedian, windowMedian + windowElements);
+        
 
 
-		// sort_bubble(windowMedian,windowElements);
+		// for 128 frame -> Time taken: 0.04s
+		sort_bubble(windowMedian, windowElements);
+		
 		// sort_linear(windowMedian,windowElements);
 		// sort_quick(windowMedian,0,windowElements);
 
-		// sort_kernel<<<blks,tpb>>>(windowMedianDEV);
+		//sort_kernel<<<blks,tpb>>>(windowMedian);
+
 		// printf("%d \n", (int)windowMedian[windowElements/2]);
-		//*(dst_ptr + dst_offset) = windowMedian[windowElements/2];
+		*(dst_ptr + dst_offset) = windowMedian[windowElements/2];
 	}
 }
 

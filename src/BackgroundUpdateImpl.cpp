@@ -73,9 +73,12 @@ void BackgroundUpdateImpl::onFrame(NvBufSurface *p_surface, NvDsFrameMeta *p_fra
   nvds_add_display_meta_to_frame(p_frame_meta, display_meta);
 
   rec_buf = allocate_surface(p_surface);
-  record.push_back(rec_buf);
-  const int RECORD_LENGTH = 1024; 
-  if (frame_number == RECORD_LENGTH-1)
+  
+  if (frame_number%32 == 0) record.push_back(rec_buf);
+  
+  const int RECORD_LENGTH = 128;
+   
+  if (frame_number == 1024*4-1)
   {
     dst_buf = allocate_surface(p_surface);
     printf(" main: output_rows: %d output_cols: %d dst_pitch: %d src_pitch: %d \n ",
@@ -89,7 +92,6 @@ void BackgroundUpdateImpl::onFrame(NvBufSurface *p_surface, NvDsFrameMeta *p_fra
     printf("\n\n\nTime taken: %.2fs\n\n\n", (double)(clock() - tStart)/CLOCKS_PER_SEC);
 
     save_to_disk(dst_buf);
-
 
     for (auto rec : record)
     {

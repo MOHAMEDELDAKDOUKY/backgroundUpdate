@@ -60,7 +60,7 @@ target_include_directories(${PROJECT_NAME} PUBLIC ${Common_Includes})
 target_link_libraries(${PROJECT_NAME} PUBLIC ${Common_Libs})
 install(TARGETS ${PROJECT_NAME} LIBRARY DESTINATION ${CMAKE_INSTALL_PREFIX})
 
-#set_target_properties(${PROJECT_NAME} PROPERTIES CUDA_SEPARABLE_COMPILATION ON)
+# set_target_properties(${PROJECT_NAME} PROPERTIES CUDA_SEPARABLE_COMPILATION ON)
 
 # target_compile_options(${PROJECT_NAME} PRIVATE $<$<COMPILE_LANGUAGE:CUDA>:
 #                         -arch=sm_52                        
