@@ -143,13 +143,11 @@ __global__ void temporal_median_filter(uint8_t **recordDEV,
 			// printf(" %d, %d \n", windowMedian[windowElements] , *(recordDEV[windowElements] + dst_offset));
 		}
 
-		// sort_insertion(windowMedian,windowElements);
+		//sort_insertion(windowMedian,windowElements);
 		
 		// for 128 frame -> Time taken: 0.32s
 		//thrust::sort(thrust::device, windowMedian, windowMedian + windowElements);
         
-
-
 		// for 128 frame -> Time taken: 0.04s
 		sort_bubble(windowMedian, windowElements);
 		
@@ -204,69 +202,3 @@ extern "C" void median_filter(NvBufSurface *src, NvBufSurface *dst,
 
 	cudaFree(recordDEV);
 }
-
-// from here: https://stackoverflow.com/questions/64441827/cuda-thrustsort-met-memory-problem-when-i-still-have-enough-memory
-// cudaError_t err = cudaDeviceSetLimit(cudaLimitMallocHeapSize, 1048576ULL*1024);
-
-// __global__ void across_frame_median_filter(uint8_t **recordDEV, uint8_t *windowMedianDEV,
-// 										   uint8_t *src_ptr, int src_pitch,
-// 										   uint8_t *dst_ptr, int dst_pitch,
-// 										   int dst_width, int dst_height,
-// 										   int color_component)
-// {
-//     //printf("kernel >>>>>\n");
-
-// 	const int x = blockIdx.x * blockDim.x + threadIdx.x;
-// 	const int y = blockIdx.y * blockDim.y + threadIdx.y;
-//     //printf("kernel >>>> x: %d y: %d dst_width: %d dst_height: %d  color_component: %d\n ", x,y, dst_width, dst_height, color_component);
-
-// 	if ((x < dst_width) && (y < dst_height))
-// 	{
-// 		int dst_offset = ((dst_pitch * y) + x * 4) + color_component;
-// 		int src_offset = ((src_pitch * y) + x * 4) + color_component;
-
-// 		float windowMedian[RECORD_LENGTH];
-// 		int windowElements;
-//         // calling a __host__ function("thrust::device_vector<unsigned char,  ::thrust::device_allocator<unsigned char> > ::device_vector(unsigned long)") from a __global__ function("across_frame_median_filter") is not allowed
-//         //thrust::device_vector<uint8_t> d_windowMedian(RECORD_LENGTH);
-
-// 		for (windowElements = 0; windowElements < RECORD_LENGTH; windowElements++)
-// 		{
-// 			windowMedian[windowElements] = *(recordDEV[windowElements] + dst_offset);
-// 		    //d_windowMedian.push_back(*(recordDEV[windowElements] + dst_offset));
-// 	        //windowMedianDEV[windowElements] = *(recordDEV[windowElements] + dst_offset);
-
-// 		}
-
-// 	  	// cudaError_t status;
-// 		// void* tmpStorage = 0;
-// 		// size_t tmpStorageSize = 0;
-// 		// uint8_t* d_keys = 0;
-// 	    // unsigned dataSize = windowElements * sizeof(uint8_t);
-
-// 		//allocateDeviceMemory( &d_keys , dataSize , __LINE__ );
-// 	    //copyDataToDevice( d_keys , windowMedian , dataSize , __LINE__ );
-
-// 		//status = cub::DeviceRadixSort::SortKeys(tmpStorage, tmpStorageSize, d_keys, d_keys, windowElements);
-// 		//CHECK_ERROR( status );
-
-// 		//allocateDeviceMemory( &tmpStorage , tmpStorageSize , __LINE__ );
-
-// 		//status = cub::DeviceRadixSort::SortKeys(tmpStorage, tmpStorageSize, d_keys, d_keys, windowElements);
-// 		//CHECK_ERROR( status );
-
-// 		//copyDataToHost( h_keys , d_keys , dataSize , __LINE__ );
-
-// 		thrust::sort(thrust::device, windowMedian, windowMedian + windowElements);
-// 		//thrust::sort(thrust::device, windowMedianDEV, windowMedianDEV + windowElements);
-// 		//thrust::sort(d_windowMedian.begin(), d_windowMedian.end());
-
-// 		//sort_bubble(windowMedian, windowElements);
-// 		//sort_linear(windowMedian,windowElements);
-// 		///sort_quick(windowMedian,0,windowElements);
-// 		//*(dst_ptr + dst_offset) = windowMedianDEV[windowElements / 2];
-// 		//*(dst_ptr + dst_offset) = 0; //windowMedianGPU[0];
-// 	    *(dst_ptr + dst_offset) = windowMedian[windowElements / 2];
-
-// 	}
-// }
